@@ -4,3 +4,14 @@ import requests
 from time import sleep
 import keyboard as kb
 import os
+
+
+menu = '''
+
+
+
+9. All
+0. Exit
+
+
+'''
