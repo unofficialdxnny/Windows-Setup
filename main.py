@@ -16,3 +16,6 @@ menu = '''
 
 '''
 print(f'{menu}')
+while True:
+
+    main_input = input('Select an option : ')
