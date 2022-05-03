@@ -15,6 +15,7 @@ menu = '''
 
 
 '''
+os.system('cls')
 print(f'{menu}')
 while True:
 
