@@ -15,3 +15,4 @@ menu = '''
 
 
 '''
+print(f'{menu}')
