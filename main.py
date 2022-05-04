@@ -52,8 +52,11 @@ banner = '''
 menu = '''
 
 
+1. External Install (EI)
+2. Choco Install (CI)
+3. All
 
-9. All
+
 0. Exit
 
 
@@ -76,6 +79,9 @@ while True:
         os.system(f'cls')
         print(Colorate.Horizontal(Colors.red_to_purple, f'{banner}', 1))
         print(Colorate.Horizontal(Colors.red_to_purple, f'{menu}', 1))
+
+    
+
     elif main_input == 'clear':
         os.system(f'cls')
         print(Colorate.Horizontal(Colors.red_to_purple, f'{banner}', 1))
