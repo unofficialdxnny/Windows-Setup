@@ -58,19 +58,27 @@ menu = '''
 
 
 '''
+
 os.system('cls')
-print(Colorate.Horizontal(Colors.yellow_to_red, f'{banner}', 1))
+print(Colorate.Horizontal(Colors.red_to_purple, f'{banner}', 1))
 print('')
-print(Colorate.Horizontal(Colors.yellow_to_red, f'{menu}', 1))
+print(Colorate.Horizontal(Colors.red_to_purple, f'{menu}', 1))
 choco = ['choco', 'install']
 while True:
-
-    main_input = Write.Input("Enter your name -> ", Colors.red_to_purple, interval=0.0025).lower()
+    print('')
+    main_input = Write.Input("Select an option from above > ", Colors.red_to_purple, interval=0.0025).lower()
     x = main_input.split()
 
     if choco[0] in main_input:
         if choco[1] in main_input:
             os.system(f'{main_input}')
-    
+    elif main_input == 'cls':
+        os.system(f'cls')
+        print(Colorate.Horizontal(Colors.red_to_purple, f'{banner}', 1))
+        print(Colorate.Horizontal(Colors.red_to_purple, f'{menu}', 1))
+    elif main_input == 'clear':
+        os.system(f'cls')
+        print(Colorate.Horizontal(Colors.red_to_purple, f'{banner}', 1))
+        print(Colorate.Horizontal(Colors.red_to_purple, f'{menu}', 1))
 
-        
+    
