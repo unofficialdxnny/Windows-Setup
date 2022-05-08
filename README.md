@@ -7,7 +7,6 @@ This is a addon to the choco-package manager forexternal downloads.(apps that ar
 
 
 ## ToAdd
-- Login System with local storage (for profile downloads)
 
 
 ##  How It Works?
