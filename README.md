@@ -13,3 +13,4 @@ This is a addon to the choco-package manager forexternal downloads.(apps that ar
 - When finished the application will read the `.ps1` file which you will edit occordingly.
 - In the `external.txt` file you leave links for the download 
 - Program firstly installs the applications from `choco` and than reads the `external.txt` file
+
