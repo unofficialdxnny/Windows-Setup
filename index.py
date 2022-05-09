@@ -15,10 +15,11 @@ print('')
 with open(f'{username}.py', 'w') as a:
     with open(f'external.txt', 'r') as b:
         external = b.read()
-        with open(f'internal', 'r') as c:
+        with open(f'internal.txt', 'r') as c:
             internal = c.read()
         a.write(f"""
 
+     
      
 ## This is a addon to the choco package manager for personal downloads.(apps that arent available)
 
@@ -28,7 +29,9 @@ import keyboard as kb
 import os
 from pystyle import Write, Colorate, Colors
 import getpass
-
+import random
+from urllib.parse import urlparse 
+from os.path import splitext
 
 username = getpass.getuser()
 
@@ -121,14 +124,28 @@ if is_admin():
         x = main_input.split()
 
     
-        # if main_input == 'ei':
-        #     with open(f'external.txt', 'r') as b:
-
         if main_input == 'ci':
             os.startfile(f'choco.ps1')
             with open(f'internal.txt', 'r') as b:
                 for lines in b:
-                    os.system(f'choco install {lines}')
+                    os.system(f'choco install {lines} -y --force')
+
+        elif main_input == 'ei':
+            with open(f'external.txt', 'r') as f:
+                lines = f.readlines()
+                print(f'Installing Your External Files')
+                for url in lines:
+                    path = urlparse(url).path
+                    ext = splitext(path)[1]
+                for line in lines:
+                    url = line
+                    r = requests.get(url, allow_redirects=True)
+                    x = random.random()
+                    open(f'{x}.{ext}', 'wb').write(r.content)
+                    
+
+                
+            
 
 
 
