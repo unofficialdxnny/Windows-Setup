@@ -1,6 +1,8 @@
 # choco-addon
 This is a addon to the choco-package manager forexternal downloads.(apps that arent available)
 
+### Still In Progress
+
 ## Pros
 - This program lets you install packages from `choco` 
 - Allows you to download from external sources via `Requests`
@@ -10,7 +12,10 @@ This is a addon to the choco-package manager forexternal downloads.(apps that ar
 
 
 ##  How It Works?
-- When finished the application will read the `.ps1` file which you will edit occordingly.
-- In the `external.txt` file you leave links for the download 
-- Program firstly installs the applications from `choco` and than reads the `external.txt` file
-
+- There are two `text` files included with this script. `Internal` and `External`. 
+- In `internal.txt` include just the names of applications included on <a href='https://chocolatey.org/'>choco website</a>
+- In `external.txt` include direct download links for applications you want to download
+- Run `python index.py`
+- Follow instructions in `index.py`
+- A file will be created as `username.py`
+- When `username.py` is ran select an option :)
