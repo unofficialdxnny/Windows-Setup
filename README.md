@@ -15,10 +15,3 @@ This is a addon to the choco-package manager forexternal downloads.(apps that ar
 
 
 ##  How It Works?
-- There are two `text` files included with this script. `Internal` and `External`. 
-- In `internal.txt` include just the names of applications included on <a href='https://chocolatey.org/'>choco website</a>
-- In `external.txt` include direct download links for applications you want to download
-- Run `python index.py`
-- Follow instructions in `index.py`
-- A file will be created as `username.py`
-- When `username.py` is ran select an option :)
