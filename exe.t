@@ -1,1 +1,1 @@
-This is where you will add links to your .exe files
+https://code.visualstudio.com/docs/?dv=win

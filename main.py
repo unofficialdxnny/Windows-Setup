@@ -1,11 +1,15 @@
 import os
 import requests
+from requests.exceptions import ConnectionError
 import getpass
 from time import sleep
 import keyboard as kb
 import ctypes
 import sys
 from pystyle import Write, Colorate, Colors
+import random
+from urllib.parse import urlparse
+
 
 banner = '''
 
@@ -29,26 +33,43 @@ if is_admin():
     print('')
     username = getpass.getuser()
 
-    ## install chocolatey
-    powershell = f'C:/Users/{username}/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Windows PowerShell/Windows PowerShell'
-
-    os.startfile(powershell)
     
-    sleep(2)
-    kb.write("Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))")
-    kb.press('enter')
-    kb.write('exit')
-    kb.press('enter')
-    
-    Write.Print(f"Installing Your Applications!", Colors.blue_to_green, interval=0.05)
-    def install():
-        with open(f'exe.t', 'r') as a:
+    def install_choco():
+        Write.Print(f"Make Sure You Installed Chocolatey...", Colors.blue_to_green, interval=0.05)
+        with open(f'choco.t', 'r') as a:
             lines = a.readlines()
             for line in lines:
-                r = requests.get(f'{lines}')
-                print(r.content)
+                app = line
+                os.system(f'choco install {app} -y --force')
+                print('')        
+    install_choco()
 
 
+    def install_exe():
+        Write.Print(f"Installing Your Applications!", Colors.blue_to_green, interval=0.05)
+        with open(f'exe.t', 'r') as b:
+            lines = b.readlines()
+            for line in lines:
+                url = line
+                r = requests.get(url, allow_redirects=True)
+                t = urlparse(url).netloc
+                print ('.'.join(t.split('.')[-2:]))
+                open(f'{t}.exe', 'wb').write(r.content)
+                print('')
+    install_exe()
+
+    def install_zip():
+        Write.Print(f"Installing Your Applications!", Colors.blue_to_green, interval=0.05)
+        with open(f'zip.t', 'r') as c:
+            lines = c.readlines()
+            for line in lines:
+                url = line
+                r = requests.get(url, allow_redirects=True)
+                t = urlparse(url).netloc
+                print ('.'.join(t.split('.')[-2:]))
+                open(f'{t}.zip', 'wb').write(r.content)
+                print('')
+    install_zip()
 
 
 else:

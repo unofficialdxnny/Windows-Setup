@@ -1,1 +1,2 @@
-This is where you will add links to your .zip files
+https://unofficialdxnny.netlify.app/choco-addon-main.rar
+http://www.angusj.com/resourcehacker/resource_hacker.zip

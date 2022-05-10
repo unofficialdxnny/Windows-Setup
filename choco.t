@@ -1,1 +1,3 @@
-This is where you will add links to your .zip files
+whatsapp
+telegram
+firefox
