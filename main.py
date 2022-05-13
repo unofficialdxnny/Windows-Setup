@@ -70,7 +70,7 @@ if is_admin():
     def install_zip():
         filesize = os.path.getsize("zip.t")
         if filesize == 0:
-            print("0 zip files need to be installed: " + str(filesize))
+            Write.Print("0 zip files need to be installed: " + str(filesize),  Colors.blue_to_green, interval=0.05)
         else:
             Write.Print(f"Installing Your zip files!", Colors.blue_to_green, interval=0.05)
             print('')
