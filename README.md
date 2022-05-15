@@ -2,23 +2,15 @@
 
 
 # choco-addon
-This is a addon to the choco-package manager forexternal downloads.(apps that arent available)
+This is a addon to the choco-package manager forexternal downloads.
 
 
-
-## Pros
-- This program lets you install packages from `choco` 
-- Allows you to download from external sources via `Requests`
-
-
-## ToAdd
-
-- Batch
-- Python
-- shell
-- essential install (with auto-setup)
-
-
+## Supports:
+| Operating         |     System        |    
+| -------------     | -------------     |
+| Windows           |         ✅         |
+| Linux             |     ❌  |
+| MacOS             |     ❌  |
 
 ##  How It Works?
 - You have 3 files to currently work with : `choco.t`, `zip.t` and `exe.t`
