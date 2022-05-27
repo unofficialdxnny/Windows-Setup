@@ -12,6 +12,9 @@ This is a addon to the choco-package manager forexternal downloads.
 | Linux             |     ❌  |
 | MacOS             |     ❌  |
 
+you can easily manipulate the code to work for these platforms but atm I just do not use linux and I dont have a mac
+
+
 ##  How It Works?
 - You have 3 files to currently work with : `choco.t`, `zip.t` and `exe.t`
 - In `choco.t` add the application names to download.
