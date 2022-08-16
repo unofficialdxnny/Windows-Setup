@@ -2,6 +2,8 @@
 # choco-addon
 This is a addon to the choco-package manager forexternal downloads.
 
+----
+#### **PROJECT MOVED TO <a href="https://github.com/unofficialdxnny/Assembly">unofficialdxnny/Assembly</a> **
 
 ## Supports:
 | Operating         |     System        |    
@@ -19,3 +21,5 @@ you can easily manipulate the code to work for these platforms but atm I just do
 - In `zip.t` add direct download links for your desired `.zip` files
 - In `exe.t` add direct download links for your want `.exe` files
 - run `python main.py`
+
+
